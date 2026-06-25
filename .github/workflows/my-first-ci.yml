@@ -1,0 +1,10 @@
+name: My First DevOps Pipeline
+
+on: [push]
+
+jobs:
+  say-hello-job:
+    runs-on: ubuntu-latest 
+    steps:
+    - name: Screen par welcome message print karo
+      run: echo "Hello Vaishali! Aapki pehli CI/CD Pipeline successfully chal gayi hai! 🚀"
