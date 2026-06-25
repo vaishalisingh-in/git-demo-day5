@@ -1,8 +1,0 @@
-YAML
-name: Test Pipeline
-on: push
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello Vaishali, pipeline is working!"
