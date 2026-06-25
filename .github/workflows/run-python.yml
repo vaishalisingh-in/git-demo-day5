@@ -1,0 +1,19 @@
+name: Execute Developer Python Script
+
+   on: [push]
+
+   jobs:
+     run-python-job:
+       runs-on: ubuntu-latest
+
+       steps:
+       - name: Checkout Repository Code
+         uses: actions/checkout@v4
+
+       - name: Setup Python Environment
+         uses: actions/setup-python@v5
+         with:
+           python-version: '3.10'
+
+       - name: Run the Script
+         run: python app.py
