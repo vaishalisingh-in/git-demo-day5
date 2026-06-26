@@ -1,8 +1,21 @@
-yaml
-   name: Test Pipeline
-   on: push
-   jobs:
-     test:
-       runs-on: ubuntu-latest
-       steps:
-         - run: echo "Hello Vaishali, pipeline is working!"
+name: GitHub Actions Demo
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v4
+
+      - name: Run a Simple Script
+        run: |
+          echo "Hello Vaishali! Your fresh GitHub Actions Pipeline is working perfectly."
+          echo "Current date and time:"
+          date
